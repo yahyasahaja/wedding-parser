@@ -5,8 +5,8 @@
       class="input-text"
       cols=10
     />
-    <button @click="clear">
-      hapus semua
+    <button class="button" @click="clear">
+      Hapus Semua
     </button>
     <h3>
       Hasil (klik untuk copy):
@@ -79,15 +79,28 @@ export default {
   font-size: 12pt;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .input-text {
   max-width: 350px;
   padding: 10px;
   width: 100%;
-  margin: 10px;
+  margin: 10px auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   font-size: 14pt;
   border: 1px solid #7d7d7d;
   border-radius: 10px;
   min-height: 300px;
+  display: block;
+}
+
+.button {
+  border: none;
+  background: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
 }
 </style>
