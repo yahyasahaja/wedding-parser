@@ -1,8 +1,12 @@
 <template>
   <div id="app">
+    <label>
+      Format: nama, jam
+    </label>
     <textarea
       v-model="urlsInput"
       class="input-text"
+      placeholder="Bapak Solihin, 10"
       cols=10
     />
     <button class="button" @click="clear">
