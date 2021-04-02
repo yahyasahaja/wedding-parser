@@ -55,7 +55,10 @@ export default {
     },
     links() {
       return this.linkData
-        .map(({ name, time }) =>
+        .map(({
+          name,
+          // time
+        }) =>
           // new URL(`https://aldhynida.netlify.app/?jam=${time}&nama=${name}`).toString()
           new URL(`https://aldhynida.netlify.app/?nama=${name}`).toString()
         );
