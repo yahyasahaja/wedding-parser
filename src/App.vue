@@ -6,7 +6,7 @@
     <textarea
       v-model="urlsInput"
       class="input-text"
-      placeholder="Bapak Solihin, 10"
+      placeholder="Bapak Solihin"
       cols=10
     />
     <button class="button" @click="clear">
@@ -38,11 +38,17 @@ export default {
       return this.urlsInput
         .split('\n')
         .map(str => {
-          const [name, time] = str.split(',').map(s => s.trim());
-          if (!name || !time) return null
+          const [
+            name,
+            // time
+          ] = str.split(',').map(s => s.trim());
+          if (
+            !name
+            // || !time
+          ) return null
           return {
             name,
-            time
+            // time
           }
         })
         .filter(data => data)
@@ -50,7 +56,8 @@ export default {
     links() {
       return this.linkData
         .map(({ name, time }) =>
-          new URL(`https://adhisazis.netlify.app/?jam=${time}&nama=${name}`).toString()
+          // new URL(`https://aldhynida.netlify.app/?jam=${time}&nama=${name}`).toString()
+          new URL(`https://aldhynida.netlify.app/?nama=${name}`).toString()
         );
     }
   },
