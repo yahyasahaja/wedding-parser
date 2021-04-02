@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <label>
-      Format: nama, jam
+      Format: nama (dipisah per-baris)
     </label>
     <textarea
       v-model="urlsInput"
